@@ -5,3 +5,8 @@
 !/.gitignore
 !/track-2-development
 !/track-3-ai
+
+# docs/ is intentionally NOT ignored so local AI tooling (Cursor/Codex) can read it.
+# It is deliberately left UNTRACKED so it never gets pushed to GitHub.
+# Do NOT `git add docs/` or commit anything under docs/.
+!/docs
