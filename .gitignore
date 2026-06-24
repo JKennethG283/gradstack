@@ -1,0 +1,6 @@
+# Ignore everything by default
+*
+
+# Except the files we explicitly want to track
+!.gitignore
+!track-2-development-summary.md
