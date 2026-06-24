@@ -3,4 +3,4 @@
 
 # Except the files we explicitly want to track
 !.gitignore
-!track-2-development-summary.md
+!task-1-dhp-data-model.md
