@@ -3,4 +3,8 @@
 
 # Except the files we explicitly want to track
 !.gitignore
-!task-1-dhp-data-model.md
+
+# Un-ignore the docs folder and only the one file inside it
+!docs/
+docs/*
+!docs/task-1-dhp-data-model.md
