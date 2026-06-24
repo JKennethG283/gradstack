@@ -1,10 +1,7 @@
-# Ignore everything by default
-*
+# Ignore everything at the top level by default
+/*
 
-# Except the files we explicitly want to track
-!.gitignore
-
-# Un-ignore the docs folder and only the one file inside it
-!docs/
-docs/*
-!docs/task-1-dhp-data-model.md
+# Track only the challenge track/task folders (and this file)
+!/.gitignore
+!/track-2-development
+!/track-3-ai
