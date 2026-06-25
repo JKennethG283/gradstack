@@ -19,15 +19,17 @@ try:
     from jsonschema import Draft202012Validator
 except ImportError as exc:  # pragma: no cover - shown as a setup error.
     raise SystemExit(
-        "Missing dependency: jsonschema. Install dependencies from requirements.txt."
+        "Missing dependency: jsonschema. Install dependencies from scripts/requirements.txt."
     ) from exc
 
 
+# This script lives in <task>/scripts/, while data/ and .env live one level up.
 BASE_DIR = Path(__file__).resolve().parent
-RAW_INPUT_PATH = BASE_DIR / "data" / "raw" / "jordan-unfiltered-input.json"
-SCHEMA_PATH = BASE_DIR / "data" / "schema" / "dhp-profile-page.schema.json"
-CANONICAL_REFERENCE_PATH = BASE_DIR / "data" / "reference" / "dhp-profile-page.reference.json"
-GENERATED_DIR = BASE_DIR / "data" / "generated"
+PROJECT_DIR = BASE_DIR.parent
+RAW_INPUT_PATH = PROJECT_DIR / "data" / "raw" / "jordan-unfiltered-input.json"
+SCHEMA_PATH = PROJECT_DIR / "data" / "schema" / "dhp-profile-page.schema.json"
+CANONICAL_REFERENCE_PATH = PROJECT_DIR / "data" / "reference" / "dhp-profile-page.reference.json"
+GENERATED_DIR = PROJECT_DIR / "data" / "generated"
 OUTPUT_DIR = GENERATED_DIR / "outputs"
 METRICS_DIR = GENERATED_DIR / "metrics"
 MANIFEST_PATH = GENERATED_DIR / "manifest.json"
@@ -35,7 +37,7 @@ MANIFEST_PATH = GENERATED_DIR / "manifest.json"
 try:
     from dotenv import load_dotenv
 
-    load_dotenv(BASE_DIR / ".env")
+    load_dotenv(PROJECT_DIR / ".env")
 except Exception:
     pass
 

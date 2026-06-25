@@ -32,7 +32,7 @@ Then open:
 Install the Python dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -r scripts/requirements.txt
 ```
 
 Copy `.env.example` to `.env`, then add your API keys:
@@ -41,10 +41,10 @@ Copy `.env.example` to `.env`, then add your API keys:
 GOOGLE_API_KEY=...
 ```
 
-Then run:
+Then run (from this folder):
 
 ```bash
-python run_prompt_eval.py
+python scripts/run_prompt_eval.py
 ```
 
 The runner uses:
@@ -80,7 +80,13 @@ You can change these in `.env` if Google AI Studio shows different model IDs for
 To test the website layout without API calls:
 
 ```bash
-python run_prompt_eval.py --dry-run
+python scripts/run_prompt_eval.py --dry-run
+```
+
+You can also re-run a single combination, e.g.:
+
+```bash
+python scripts/run_prompt_eval.py --provider gemini-flash --tone supportive-coach
 ```
 
 Dry-run outputs are clearly marked in the metrics and should not be presented as real LLM results.
@@ -89,11 +95,11 @@ Dry-run outputs are clearly marked in the metrics and should not be presented as
 
 | File | Purpose |
 |---|---|
-| `index.html` | DHP profile page shell |
-| `app.js` | Loads the final JSON and renders the DHP profile page |
-| `styles.css` | Styling for the JSON-rendered DHP page |
-| `run_prompt_eval.py` | LangGraph/LangChain prompt evaluation runner |
-| `requirements.txt` | Python dependencies for the prompt evaluator |
+| `index.html` | DHP profile page shell (web app entry point / Vercel root) |
+| `web/app.js` | Loads the final JSON and renders the DHP profile page |
+| `web/styles.css` | Styling for the JSON-rendered DHP page |
+| `scripts/run_prompt_eval.py` | LangGraph/LangChain prompt evaluation runner |
+| `scripts/requirements.txt` | Python dependencies for the prompt evaluator |
 | `.env.example` | Environment variable template for API keys and model IDs |
 | `data/raw/jordan-unfiltered-input.json` | Raw, messy source information about Jordan, jobs, evidence, verification, and page requirements |
 | `data/schema/dhp-profile-page.schema.json` | Fixed JSON contract the LLM must follow |
@@ -120,7 +126,7 @@ It includes the content needed to rebuild:
 
 ## Prompt test
 
-The evaluator builds the prompt in `run_prompt_eval.py`, using the raw JSON, schema, and canonical DHP reference.
+The evaluator builds the prompt in `scripts/run_prompt_eval.py`, using the raw JSON, schema, and canonical DHP reference.
 
 ### What works
 

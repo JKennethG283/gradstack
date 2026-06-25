@@ -189,7 +189,7 @@ class DHPJsonProfile extends HTMLElement {
               Run the Python evaluator to create <code>data/generated/manifest.json</code>.
             </p>
           </div>
-          <code>python run_prompt_eval.py</code>
+          <code>python scripts/run_prompt_eval.py</code>
         </section>
       `;
     }
