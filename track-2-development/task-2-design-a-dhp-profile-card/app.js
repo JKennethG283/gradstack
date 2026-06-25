@@ -907,11 +907,16 @@ class GradstackOnboardingDemo extends HTMLElement {
             <p class="eyebrow">DHP profile</p>
             <h2>Story, skills, proof, trust, and verified indexes in one profile.</h2>
           </div>
-          <p>
-            This page shows how Jordan's profile is more useful than a flat resume:
-            it explains the person, the evidence, the employer-facing VEI, and the
-            capability-backed VCI employers can trust.
-          </p>
+          <div class="page-action-block">
+            <p>
+              This page shows how Jordan's profile is more useful than a flat resume:
+              it explains the person, the evidence, the employer-facing VEI, and the
+              capability-backed VCI employers can trust.
+            </p>
+            <button type="button" class="secondary-action page-update-action">
+              Edit DHP profile
+            </button>
+          </div>
         </div>
 
         <dhp-readiness-card></dhp-readiness-card>
@@ -927,11 +932,16 @@ class GradstackOnboardingDemo extends HTMLElement {
             <p class="eyebrow">Opportunities + VEI</p>
             <h2>Employability signals are connected to each role.</h2>
           </div>
-          <p>
-            VEI turns Jordan's employer readiness, industry alignment,
-            collaboration, execution consistency, and professional maturity into
-            clear opportunity decisions.
-          </p>
+          <div class="page-action-block">
+            <p>
+              VEI turns Jordan's employer readiness, industry alignment,
+              collaboration, execution consistency, and professional maturity into
+              clear opportunity decisions.
+            </p>
+            <button type="button" class="secondary-action page-update-action">
+              Improve opportunity fit
+            </button>
+          </div>
         </div>
 
         <div class="opportunity-index-grid">
@@ -983,10 +993,15 @@ class GradstackOnboardingDemo extends HTMLElement {
             <p class="eyebrow">Verified Capability Index</p>
             <h2>Five validated layers show what Jordan can actually do.</h2>
           </div>
-          <p>
-            VCI separates capability from confidence. Each layer has its own
-            evidence source, validation status, and sector benchmark.
-          </p>
+          <div class="page-action-block">
+            <p>
+              VCI separates capability from confidence. Each layer has its own
+              evidence source, validation status, and sector benchmark.
+            </p>
+            <button type="button" class="secondary-action page-update-action">
+              Add VCI evidence
+            </button>
+          </div>
         </div>
 
         <div class="vci-hero-grid">

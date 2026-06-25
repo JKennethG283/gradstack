@@ -610,6 +610,30 @@ select:focus {
   line-height: 1.5;
 }
 
+.page-action-block {
+  display: grid;
+  gap: 14px;
+  justify-items: end;
+}
+
+.page-action-block p {
+  max-width: 430px;
+  text-align: right;
+}
+
+.page-update-action {
+  width: fit-content;
+  border-color: rgba(17, 155, 74, 0.24);
+  background: var(--lift);
+  color: var(--ready-dark);
+  box-shadow: 0 10px 24px rgba(36, 32, 74, 0.06);
+}
+
+.page-update-action:hover {
+  background: var(--surface);
+  box-shadow: 0 12px 28px rgba(36, 32, 74, 0.08);
+}
+
 .dashboard-summary {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2118,6 +2142,15 @@ select:focus {
 
   .application-grid {
     grid-template-columns: 1fr;
+  }
+
+  .page-action-block {
+    justify-items: start;
+  }
+
+  .page-action-block p {
+    max-width: 680px;
+    text-align: left;
   }
 
   .prototype-frame {
