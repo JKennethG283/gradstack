@@ -1,5 +1,5 @@
-// index.html lives in web/, while data/ lives one level up at the task root.
-const DATA_PREFIX = "../";
+// index.html and data/ both live at the task root.
+const DATA_PREFIX = "./";
 const MANIFEST_URL = `${DATA_PREFIX}data/generated/manifest.json`;
 
 function safeText(value) {

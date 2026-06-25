@@ -17,8 +17,7 @@ The LLM should not create a random paragraph response. It should output the same
 
 ## Run the generated DHP pages
 
-Because the page loads generated JSON files, run it through a local server from this folder
-(the task root, so `data/` stays inside the server root):
+Because the page loads generated JSON files, run it through a local server from this folder:
 
 ```bash
 python -m http.server 8010
@@ -26,7 +25,7 @@ python -m http.server 8010
 
 Then open:
 
-`http://localhost:8010/web/`
+`http://localhost:8010`
 
 ## Run the LangGraph prompt comparison
 
@@ -96,9 +95,9 @@ Dry-run outputs are clearly marked in the metrics and should not be presented as
 
 | File | Purpose |
 |---|---|
-| `web/index.html` | DHP profile page shell (web app entry point) |
-| `web/app.js` | Loads the final JSON and renders the DHP profile page |
-| `web/styles.css` | Styling for the JSON-rendered DHP page |
+| `index.html` | DHP profile page shell (web app entry point) |
+| `app.js` | Loads the final JSON and renders the DHP profile page |
+| `styles.css` | Styling for the JSON-rendered DHP page |
 | `scripts/run_prompt_eval.py` | LangGraph/LangChain prompt evaluation runner |
 | `scripts/requirements.txt` | Python dependencies for the prompt evaluator |
 | `.env.example` | Environment variable template for API keys and model IDs |
