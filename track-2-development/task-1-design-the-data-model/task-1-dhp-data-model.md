@@ -25,7 +25,7 @@ The model therefore needs to store:
 | Area | Tables | Why it matters for Jordan |
 |---|---|---|
 | Account and onboarding | `users`, `contact_links`, `onboarding_sessions`, `onboarding_imports`, `evidence_attachments` | Gets Jordan from first setup to a filled DHP without making the first visit feel heavy. |
-| Profile core | `digital_human_profiles`, `education`, `experiences`, `skills`, `dhp_skills`, `projects`, `project_skills`, `evidence`, `goals`, `dhp_values`, `ai_readiness` | Captures the whole person, not just education and job titles. |
+| Profile core | `digital_human_profiles`, `career_interests`, `education`, `experiences`, `skills`, `dhp_skills`, `projects`, `project_skills`, `evidence`, `goals`, `dhp_values`, `ai_readiness` | Captures the whole person, not just education and job titles. |
 | Trust and privacy | `verification_statuses`, `profile_visibility_rules`, `consent_records` | Stores trust signals and permissions without publishing sensitive documents by default. |
 | Readiness and indexes | `readiness_signals`, `verified_employability_indexes`, `vei_signals`, `vei_trend_points`, `vei_role_impacts`, `verified_capability_indexes`, `vci_layers`, `vci_ai_fluency_signals`, `vci_sector_benchmarks`, `vci_validation_sources` | Powers the Task 2 dashboard: completeness, proof strength, VEI, VCI, benchmarks, and next actions. |
 | Opportunities and applications | `employers`, `opportunities`, `opportunity_requirements`, `opportunity_matches`, `opportunity_match_gaps`, `applications`, `application_status_events` | Turns the DHP into guidance, so Jordan knows when to apply, hold for proof, or treat a role as a growth path. |
@@ -652,7 +652,7 @@ Stores a visible status timeline, rather than only the current status.
 
 ## Task 2 Data Coverage
 
-The prototype in `task-2-design-a-dhp-profile-card` is backed by this model as follows:
+The prototype in `task-2-build-a-component-or-prototype` is backed by this model as follows:
 
 | Task 2 data | Backing model |
 |---|---|

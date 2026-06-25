@@ -1,10 +1,18 @@
 # Task 2 Prototype: DHP Onboarding and Readiness Dashboard
 
+## Live demo
+
+**[gradstack-track-2-task-2-prototype.vercel.app](https://gradstack-track-2-task-2-prototype.vercel.app/)**
+
 ## What this is
 
 This is a small frontend prototype for Jordan's first Gradstack experience. It is not a full Community Hub. It now covers the first-run path from a manual welcome screen, to account setup, to basic profile details, to a simulated resume or LinkedIn import, and finally into a multi-page DHP readiness dashboard.
 
-Open `index.html` in a browser to view it.
+## How to run
+
+- **Easiest:** open the live demo link above.
+- **Locally (double-click):** open `index.html` in a browser. The script loads with `defer` (no ES modules), so it works straight from the file system.
+- **Locally (served):** from this folder run `python -m http.server 8000`, then visit `http://localhost:8000`.
 
 The visual direction follows the live Gradstack site: DM Sans typography,
 JetBrains Mono for score-like labels, off-white page surfaces, deep purple

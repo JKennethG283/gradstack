@@ -3,6 +3,7 @@
 
 # Track only the challenge track/task folders (and this file)
 !/.gitignore
+!/README.md
 !/track-2-development
 !/track-3-ai
 
