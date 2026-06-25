@@ -1,214 +1,245 @@
 # Track 3 - AI: Task 1
 
-## AI Feature: DHP Evidence Coach
+## AI Feature: Skills Gap and Project Pathway Builder
 
 ### 1. Feature overview
 
-The AI feature I would design is a **DHP Evidence Coach**.
+I would design an AI-powered feature that helps graduates like Jordan understand what skills, projects, courses, licences, or practical tests they need for the jobs they want.
 
-Its purpose is to help graduates like Jordan turn their real experiences into a stronger Digital Human Profile (DHP). Jordan has a communications degree, casual hospitality experience, and a goal of moving into marketing or content roles. On a normal resume, his experience may look unrelated or too light. In a DHP, those same experiences can show communication, customer insight, teamwork, reliability, writing ability, adaptability, and creative potential.
+Jordan has a communications degree, casual hospitality experience, and wants to move into marketing or content roles. He has applied for many jobs but has received very little response. This feature would make his Digital Human Profile (DHP) more useful by showing him the gap between his current profile and the requirements of roles that match, or almost match, his goals.
 
-The DHP Evidence Coach helps Jordan answer the question:
-
-> "What have I actually done that proves I could succeed in the roles I want?"
-
-Instead of only asking Jordan to list skills, the AI asks guided questions, extracts transferable skills from his answers, connects those skills to evidence, and suggests practical next steps to strengthen weak areas of the DHP.
-
-This is not just a generic recommendation engine. It is a structured AI assistant that converts messy personal experience into DHP-ready evidence.
+The feature would not just say "you need more experience." It would identify the exact skills Jordan is missing, prioritise them, and recommend practical ways to build evidence for those skills inside his DHP.
 
 ---
 
-### 2. The problem it solves for Jordan
+### 2. What the feature does
 
-Jordan has applied for 40+ roles and only received three rejections. His problem is not only that he needs more applications. His problem is that employers may not be seeing his potential.
+The feature compares three main things:
 
-The gap is between:
-
-| What Jordan has | What employers need to see |
+| Input | Purpose |
 |---|---|
-| Communications degree | Writing, research, audience understanding, content strategy |
-| Hospitality shifts | Customer empathy, pressure handling, teamwork, reliability |
-| Interest in marketing/content roles | Motivation, direction, portfolio evidence |
-| Rejected applications | Clearer positioning and proof of fit |
-| Feeling invisible | A DHP that makes his story, skills, and evidence visible |
+| Jordan's DHP data | Understand his education, work experience, projects, skills, goals, and evidence |
+| Matching job applications | Understand what entry-level marketing, content, and communications roles are asking for |
+| Skill and evidence requirements | Find which skills Jordan already has and which skills he still needs to prove |
 
-The DHP Evidence Coach helps close this gap by identifying the value hidden inside Jordan's existing experience and showing him what evidence he still needs to add.
+After comparing this data, the AI recommends:
+
+- Skills Jordan should improve
+- Courses or licences that could help him become more qualified
+- Projects or tasks he can complete to build evidence
+- Custom tests or challenges that can verify his skills
+- Which gaps matter most for the jobs he wants
+
+For example, if many content assistant roles ask for social media scheduling, campaign reporting, and copywriting, but Jordan's DHP only shows general communication skills, the system could recommend:
+
+- A short social media analytics course
+- A portfolio task where Jordan creates a campaign plan
+- A writing test where Jordan produces content for a target audience
+- A DHP evidence section showing the completed project and assessed skills
 
 ---
 
-### 3. How the feature works
+### 3. How it works at a high level
 
 ```mermaid
 flowchart TD
-    A["Jordan creates or updates his DHP"] --> B["AI asks guided questions"]
-    B --> C["AI extracts skills, experiences, goals, and evidence"]
-    C --> D["AI compares Jordan's profile with target role patterns"]
-    D --> E["AI identifies strong signals and missing proof"]
-    E --> F["AI drafts DHP-ready profile sections"]
-    F --> G["Jordan reviews, edits, and approves"]
-    G --> H["DHP shows clearer skills, story, evidence, and next actions"]
+    A["Jordan's DHP profile"] --> C["Skill comparison engine"]
+    B["Matching and near-matching job ads"] --> C
+    C --> D["Missing or weak skills are identified"]
+    D --> E["Skills are clustered by category"]
+    E --> F["Skill gaps are prioritised by frequency and importance"]
+    F --> G["LLM recommends courses, licences, projects, and tests"]
+    G --> H["AI checks project/test quality against criteria"]
+    H --> I["Human reviewer confirms before publishing"]
+    I --> J["Approved project or test appears for Jordan"]
+    J --> K["Jordan completes the task"]
+    K --> L["LLM grades submission using rubric and tools"]
+    L --> M["Human reviewer confirms result"]
+    M --> N["Verified skills and evidence are added to the DHP"]
 ```
 
-At a high level, the feature has five steps.
+The process would work in four main stages.
 
-**Step 1: Guided intake**
+### Stage 1: Compare Jordan's DHP with job requirements
 
-The AI asks Jordan simple questions about his background, such as:
+The system would use Jordan's DHP data, such as:
 
-- What kind of marketing or content work interests you?
-- What university projects are you proud of?
-- What did you do in hospitality that involved communication, problem solving, or working under pressure?
-- Have you written, designed, posted, researched, presented, or organised anything?
-- Do you have links, files, examples, assignments, campaigns, posts, or presentations that could be used as evidence?
+- Education
+- Work experience
+- Skills
+- Projects
+- Career goals
+- Uploaded evidence
+- Preferred roles
 
-The tone should feel supportive, not like a formal job application.
-
-**Step 2: Skill and evidence extraction**
-
-The AI reads Jordan's answers and extracts possible DHP signals, such as:
-
-- Writing and communication
-- Customer empathy
-- Audience awareness
-- Research
-- Teamwork
-- Reliability
-- Problem solving
-- Presentation skills
-- Content planning
-- Social media familiarity
-
-Each skill is linked to evidence where possible. For example, hospitality work should not become a vague claim like "good communication." It should become something more specific, such as:
-
-> "Handled customer questions during busy service periods, showing clear communication, patience, and ability to work under pressure."
-
-**Step 3: Role comparison**
-
-The system compares Jordan's current DHP signals with common requirements from entry-level marketing, communications, and content roles.
-
-For example, it might compare him against role patterns like:
+It would compare this information with real or sample job ads that match Jordan's goals, such as:
 
 - Marketing Assistant
 - Content Coordinator
-- Social Media Assistant
 - Communications Assistant
+- Social Media Assistant
 - Graduate Marketing role
 
-The AI looks for both matches and gaps.
-
-**Step 4: DHP content generation**
-
-The AI drafts DHP-ready content that Jordan can review before publishing. This could include:
-
-- A profile headline
-- A short personal story
-- Skill statements
-- Evidence summaries
-- Suggested portfolio items
-- Missing information prompts
-- Next best actions
-
-The AI should never publish automatically. Jordan stays in control and approves what appears on the DHP.
-
-**Step 5: Next action pathway**
-
-The feature recommends practical actions that help Jordan improve the DHP, such as:
-
-- Upload a university campaign or writing assignment
-- Write a short case study about a content idea
-- Add a link to a simple portfolio
-- Create one sample social media campaign for a real or fictional brand
-- Add evidence of teamwork, presentation, or customer-facing communication
-- Complete a short course only if it fills a clear gap
+The AI would extract the skills, tools, licences, and evidence requested by those jobs. It would then compare them with Jordan's current DHP.
 
 ---
 
-### 4. Data the feature needs
+### Stage 2: Cluster and prioritise missing skills
 
-| Data needed | Why it matters | Example |
-|---|---|---|
-| Basic profile data | Personalises the DHP content | Name, location, degree, target roles |
-| Education history | Finds academic evidence | Bachelor of Communications at UTS |
-| Work experience | Extracts transferable skills | Casual hospitality shifts |
-| Projects and assignments | Builds proof of capability | Campaign plan, presentation, article, research report |
-| Career goals | Keeps output relevant | Marketing Assistant, Content Coordinator |
-| Target role patterns | Compares Jordan with real expectations | Common skills from entry-level marketing job ads |
-| Uploaded evidence | Lets claims be supported by proof | PDFs, links, images, writing samples |
-| User consent settings | Protects privacy and control | What can be shown publicly or to employers |
+The missing skills would be grouped into clusters so the output is easier to understand.
 
-The system should separate **private raw information** from **approved public DHP content**. Jordan may share details with the AI to get help, but he should choose what appears on his profile.
+| Skill cluster | Example gaps for Jordan |
+|---|---|
+| Content creation | Copywriting, editing, writing for different audiences |
+| Marketing tools | Canva, scheduling tools, analytics dashboards, email tools |
+| Campaign thinking | Planning a campaign, measuring results, audience targeting |
+| Portfolio evidence | Writing samples, campaign examples, project case studies |
+| Professional readiness | Interview preparation, workplace communication, role-specific confidence |
+
+The system would then prioritise each skill gap based on:
+
+- How often the skill appears in matching jobs
+- How important the skill is for the role
+- Whether Jordan already has partial evidence for it
+- How quickly Jordan could build proof of the skill
+
+This makes the recommendation specific. Instead of telling Jordan to "improve marketing skills," the DHP could say:
+
+> "Copywriting and campaign reporting appear frequently in roles close to your goal. You have communication experience, but your DHP does not yet show direct evidence of these skills."
 
 ---
 
-### 5. Example output for Jordan
+### Stage 3: LLM recommends courses, licences, projects, and custom tests
+
+The prioritised skill gaps would be sent to an LLM. The LLM's job would be to evaluate the gaps and recommend the best way for Jordan to build evidence.
+
+The recommendations could include:
+
+- A course
+- A licence or certification
+- A portfolio project
+- A practical task
+- A custom skill test created by the AI
+
+Projects and tests are important because one task can prove multiple skills at once.
+
+For example:
+
+| Custom project or test | Skills it could prove |
+|---|---|
+| Create a 2-week social media campaign plan for a student event | Content planning, audience targeting, creativity, communication |
+| Write three short posts for different audiences | Copywriting, tone control, audience awareness |
+| Review campaign results and write a short insight report | Data interpretation, marketing analytics, written communication |
+| Create a basic content calendar | Organisation, planning, digital marketing awareness |
+
+This would help Jordan build practical evidence instead of only listing skills.
+
+---
+
+### Stage 4: Quality checking before users receive projects or tests
+
+The AI should not be allowed to publish its own projects or tests directly to users. Any AI-generated project, task, or test would go through a two-stage checking process before it appears in the DHP.
 
 ```mermaid
 flowchart LR
-    A["Raw experience"] --> B["AI interpretation"]
-    B --> C["DHP-ready evidence"]
-
-    A1["Hospitality shifts"] --> B1["Customer communication, reliability, pressure handling"]
-    B1 --> C1["Evidence statement for communication and teamwork"]
-
-    A2["Communications degree"] --> B2["Writing, research, audience awareness"]
-    B2 --> C2["Profile skills and project evidence"]
-
-    A3["Interest in content roles"] --> B3["Career direction and motivation"]
-    B3 --> C3["Headline, career story, and next actions"]
+    A["LLM generates project or test"] --> B["AI quality check"]
+    B --> C{"Meets criteria?"}
+    C -- "No" --> D["Revise or reject"]
+    C -- "Yes" --> E["Manual human review"]
+    E --> F{"Approved?"}
+    F -- "No" --> D
+    F -- "Yes" --> G["Publish to users"]
 ```
 
-Example DHP draft section:
+The first check would be done by an LLM. It would check whether the project or test:
 
-| DHP section | AI-generated draft |
+- Matches the skill gap
+- Has clear instructions
+- Has a realistic difficulty level
+- Has a clear rubric
+- Has required submission files
+- Can be assessed fairly
+- Does not ask for unsafe, irrelevant, or impossible work
+
+The second check would be done manually by a real person, such as a developer, product team member, or trained reviewer. This human review is important because the project affects a user's profile, confidence, and career pathway.
+
+Only verified projects and tests would be shown to users.
+
+---
+
+### 4. How user submissions are assessed
+
+Once Jordan completes a project or test, his submission would also go through a two-stage review.
+
+```mermaid
+flowchart TD
+    A["Jordan submits project or test"] --> B["LLM reviews submission"]
+    B --> C["LLM uses tools where needed"]
+    C --> D["Submission is graded against rubric"]
+    D --> E["Human reviewer checks the result"]
+    E --> F["Final result is confirmed"]
+    F --> G["DHP is updated with verified skills, evidence, and proficiency level"]
+```
+
+The LLM would read the submission and assess it against the project criteria and rubric. If needed, it could use tools to inspect files, check links, review written work, or compare the submission against the required format.
+
+Then a human reviewer would confirm the result. This reduces the risk of unfair grading, hallucinated feedback, or incorrect skill certification.
+
+If Jordan passes, the DHP could show:
+
+- The completed project
+- The skills demonstrated
+- The proficiency level
+- The rubric result
+- A short evidence summary
+- Any certificate or verified badge attached to the skill
+
+---
+
+### 5. Data the feature needs
+
+| Data needed | Why it is needed |
 |---|---|
-| Headline | Communications graduate interested in marketing, content, and community storytelling |
-| Strength | Clear communicator with customer-facing experience and a strong interest in audience-focused content |
-| Evidence | Completed communications coursework involving research, writing, and presentations |
-| Transferable skill | Hospitality experience showing teamwork, reliability, and communication under pressure |
-| Suggested next action | Upload one writing sample and create a short marketing campaign case study |
+| User profile data | To understand Jordan's background, goals, education, and work experience |
+| Skills data | To compare current skills with role requirements |
+| Project and evidence data | To know what Jordan has already proven |
+| Job application data | To extract required skills from matching and near-matching jobs |
+| Course and licence data | To recommend useful learning pathways |
+| Project/test criteria | To create fair tasks with clear requirements |
+| Rubrics | To assess submissions consistently |
+| Submission files | To review completed projects and tests |
+| Review history | To track AI and human approval decisions |
+| Consent and visibility settings | To control what appears publicly on the DHP |
+
+The system should keep raw user data private and only add approved evidence to the public DHP.
 
 ---
 
-### 6. Why this is useful for the DHP
+### 6. Outcome for Jordan
 
-The DHP is meant to show more than a resume. This feature supports that goal because it helps Jordan show:
+The outcome is that Jordan gets a clear pathway from:
 
-- **Story:** why he is interested in marketing and content
-- **Skills:** what he can actually do
-- **Evidence:** where those skills have appeared in real work, study, or projects
-- **Potential:** how his hospitality and university experience can transfer into a new field
-- **Next steps:** what he can add to become more visible to employers
+> "I want this kind of job"
 
-For Jordan, the outcome is a DHP that feels less empty and more human. Instead of seeing himself as someone with "only hospitality experience," he can see a profile that explains his communication strengths, career direction, and evidence of capability.
+to:
 
-For employers, the outcome is a clearer signal of Jordan's fit for early-career marketing and content roles. They can see not only what he studied, but how his experience, values, projects, and potential connect to the role.
+> "These are the skills I need, these are the projects or tests I can complete, and this is the evidence my DHP can show employers."
+
+For Jordan, this makes the DHP more useful because it becomes an active career-building tool, not just a profile page. It helps him understand why he may not be getting responses, what he can improve, and how to prove his capability.
+
+For employers, it creates a more trustworthy profile. Instead of seeing unsupported skill claims, they can see verified projects, completed tasks, assessment results, and evidence linked to specific role-relevant skills.
 
 ---
 
-### 7. AI safety and quality checks
-
-Because this feature affects how a person is represented to employers, it needs guardrails.
+### 7. Risks and guardrails
 
 | Risk | Guardrail |
 |---|---|
-| AI exaggerates Jordan's experience | Every generated claim must be linked to evidence or marked as a suggestion |
-| AI creates generic profile text | Use Jordan's actual inputs, target roles, and examples |
-| Sensitive data is exposed | Keep raw intake private and require approval before publishing |
-| Bias in role matching | Use transparent skill categories and let Jordan edit career goals |
-| Jordan loses control of his story | The AI drafts, but Jordan reviews and approves |
+| The AI recommends irrelevant skills | Use real matching job data and explain why each skill was selected |
+| The AI creates poor-quality projects or tests | Require AI quality checking and human approval before publishing |
+| The AI grades unfairly | Use clear rubrics and human confirmation |
+| Users receive too many recommendations | Cluster and prioritise skill gaps so the next steps are manageable |
+| Sensitive data is exposed | Keep raw profile data private and require consent before showing evidence |
+| Certificates become meaningless | Only issue verified skills after assessed submissions and review |
 
-The best version of this feature would feel like a coach, not a judge. It should help Jordan recognise and explain his value while keeping him in control of the final DHP.
-
----
-
-### 8. Success measure
-
-I would measure whether the DHP Evidence Coach works by checking:
-
-- Does Jordan complete more of his DHP after using it?
-- Does his profile include stronger evidence, not just skill labels?
-- Does he understand what to add next?
-- Are the generated statements accurate and approved by Jordan?
-- Do employers get a clearer picture of his potential?
-
-The feature is successful if Jordan leaves with a DHP that is clearer, more evidence-based, and more confident than what he could have built from a blank form.
+The feature should support Jordan without making career decisions for him. The AI can recommend, generate, and assess, but humans should remain involved where quality, fairness, and verification matter.
