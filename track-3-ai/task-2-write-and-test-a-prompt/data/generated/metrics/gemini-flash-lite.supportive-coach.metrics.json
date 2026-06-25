@@ -1,0 +1,20 @@
+{
+  "runId": "cf72a4a3-9097-410b-a79c-2013c2fba2a8",
+  "provider": "gemini-flash-lite",
+  "displayName": "Gemini Flash-Lite",
+  "model": "gemini-2.5-flash-lite",
+  "promptToneId": "supportive-coach",
+  "promptLabel": "Supportive coach",
+  "startedAt": "2026-06-25T12:25:09.139526+00:00",
+  "finishedAt": "2026-06-25T12:25:47.497050+00:00",
+  "schemaValid": true,
+  "validationErrors": [],
+  "attempts": 1,
+  "dryRun": false,
+  "outputChars": 16984,
+  "status": "completed",
+  "input_tokens": 3962,
+  "output_tokens": 4189,
+  "total_tokens": 8151,
+  "latency_ms": 38344
+}

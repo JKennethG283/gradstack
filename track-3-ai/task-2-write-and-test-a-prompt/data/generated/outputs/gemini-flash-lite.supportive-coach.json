@@ -1,0 +1,548 @@
+{
+  "schemaVersion": "dhp-profile-page.v1",
+  "sourceSummary": {
+    "generatedFor": "Jordan Lee",
+    "targetRoles": [
+      "Content Coordinator",
+      "Marketing Assistant",
+      "Social Media Assistant",
+      "Communications Assistant",
+      "Graduate Marketing role"
+    ],
+    "assumptions": [
+      "Jordan Lee is the candidate.",
+      "The provided raw information is accurate and complete.",
+      "The goal is to create a DHP profile page JSON."
+    ],
+    "unverifiedOrPending": [
+      "Degree verification is pending.",
+      "Campaign project needs to be uploaded.",
+      "AI readiness requires stronger evidence for employer-facing work."
+    ]
+  },
+  "user": {
+    "fullName": "Jordan Lee",
+    "initials": "JL",
+    "age": 24,
+    "email": "jordan.lee@example.com",
+    "phone": "0400 125 642",
+    "location": "Sydney, NSW"
+  },
+  "profileHeader": {
+    "railLabels": [
+      "Story",
+      "Skill",
+      "Proof",
+      "Trust",
+      "Index"
+    ],
+    "headline": "Recent Communications graduate seeking an entry-level marketing or content role to apply writing, research, and customer empathy skills.",
+    "metaFacts": [
+      "Bachelor of Communications",
+      "24 years old",
+      "Seeking Marketing & Content roles"
+    ],
+    "readinessScore": 74,
+    "indexLinks": [
+      {
+        "id": "vei",
+        "label": "VEI",
+        "score": 78,
+        "subtitle": "Opportunity fit",
+        "targetPage": "opportunities",
+        "tone": "ready"
+      },
+      {
+        "id": "vci",
+        "label": "VCI",
+        "score": 73,
+        "subtitle": "Capability layers",
+        "targetPage": "vci",
+        "tone": "proof"
+      }
+    ]
+  },
+  "dhpView": {
+    "personalStory": "After graduating from UTS with a Bachelor of Communications 18 months ago, Jordan is now actively seeking an entry-level marketing or content role. While gaining valuable customer-facing experience in hospitality, Jordan is eager to leverage academic learning and develop a career in content creation and marketing. Jordan feels a bit invisible in the current job market and is looking for a way to showcase skills and connect with opportunities.",
+    "insightCards": [
+      {
+        "id": "career-goal",
+        "title": "Career Direction",
+        "body": "Seeking an entry-level content or marketing role to demonstrate writing, customer empathy, and project thinking.",
+        "tone": "ready"
+      },
+      {
+        "id": "ai-readiness",
+        "title": "AI Readiness",
+        "body": "Comfortable using AI tools like ChatGPT and Notion AI for drafting and research summaries. Needs to develop stronger prompt engineering and critical evaluation skills for professional use.",
+        "tone": "growth",
+        "action": {
+          "label": "Learn more about responsible AI use",
+          "target": "ai-readiness-guidance"
+        }
+      },
+      {
+        "id": "job-application-strategy",
+        "title": "Application Strategy",
+        "body": "Applied for 40+ roles across various platforms. Focus on tailoring applications and ensuring key evidence is visible to employers.",
+        "tone": "ready",
+        "action": {
+          "label": "See best match opportunities",
+          "target": "match-panel"
+        }
+      }
+    ],
+    "skillsWithEvidence": [
+      {
+        "id": "copywriting",
+        "name": "Copywriting",
+        "level": "Working",
+        "confidence": 4,
+        "context": "Attached writing sample, used in portfolio, cover letters, and university campaign copy.",
+        "evidence": "Writing sample attached.",
+        "status": "Verified"
+      },
+      {
+        "id": "customer-communication",
+        "name": "Customer Communication",
+        "level": "Confident",
+        "confidence": 5,
+        "context": "Practised daily through hospitality work and complaint resolution.",
+        "evidence": "Customer-facing hospitality role.",
+        "status": "Verified"
+      },
+      {
+        "id": "research-content-planning",
+        "name": "Research and Content Planning",
+        "level": "Working",
+        "confidence": 4,
+        "context": "Used in a university campaign strategy project for a youth audience.",
+        "evidence": "University campaign strategy project (needs upload).",
+        "status": "Pending"
+      },
+      {
+        "id": "canva",
+        "name": "Canva",
+        "level": "Basic to Working",
+        "confidence": 3,
+        "context": "Used for design tasks.",
+        "evidence": "Mentioned in profile.",
+        "status": "Needs Evidence"
+      }
+    ],
+    "trustAndConsent": [
+      {
+        "id": "working-rights",
+        "type": "Working Rights",
+        "status": "Verified",
+        "visibility": "Employer on request",
+        "note": "Verification status stored, not the raw document.",
+        "tone": "ready"
+      },
+      {
+        "id": "degree-verification",
+        "type": "Degree",
+        "status": "Pending",
+        "visibility": "Employer on request",
+        "note": "Qualification claim exists, but verification is not yet complete.",
+        "tone": "warning"
+      }
+    ]
+  },
+  "resumeView": {
+    "education": [
+      {
+        "qualification": "Bachelor of Communications",
+        "institution": "University of Technology Sydney",
+        "status": "Completed (Pending Verification)"
+      }
+    ],
+    "experiences": [
+      {
+        "title": "Hospitality Team Member",
+        "organisation": "Various (Casual)",
+        "detail": "Provided customer-facing service during busy periods, collaborating with a team under pressure. Developed skills in customer communication, reliability, prioritization, and resilience."
+      }
+    ],
+    "projects": [
+      {
+        "title": "University Campaign Strategy Project",
+        "role": "Student",
+        "outcome": "Developed audience research, channel planning, and sample campaign content.",
+        "status": "Ready to Attach"
+      },
+      {
+        "title": "Writing Sample",
+        "role": "Student/Portfolio",
+        "outcome": "Demonstrates copywriting, written communication, and audience clarity.",
+        "status": "Attached"
+      }
+    ],
+    "applications": [
+      {
+        "title": "Marketing Intern",
+        "employer": "Hatch listing",
+        "status": "Viewed",
+        "note": "Employer viewed DHP summary."
+      },
+      {
+        "title": "Content Assistant",
+        "employer": "LinkedIn listing",
+        "status": "Submitted",
+        "note": "No employer activity yet."
+      }
+    ]
+  },
+  "matchPanel": {
+    "title": "Capability match",
+    "intro": "Jordan can see where his DHP is already verified, where proof is missing, and what is better treated as a growth path.",
+    "selectedMatchId": "marketing-assistant",
+    "opportunities": [
+      {
+        "id": "content-coordinator",
+        "title": "Junior Content Coordinator",
+        "employer": "Civic Spark Studio",
+        "status": "ready",
+        "matchScore": 86,
+        "summary": "A strong potential match, leveraging your writing, research, and customer empathy skills. Ensure your writing sample and hospitality communication evidence are clearly visible.",
+        "matchedSkills": [
+          "Copywriting",
+          "Research",
+          "Canva",
+          "Customer empathy"
+        ],
+        "missing": [],
+        "nextAction": "Apply now"
+      },
+      {
+        "id": "marketing-assistant",
+        "title": "Marketing Assistant",
+        "employer": "Social Impact Collective",
+        "status": "needs-info",
+        "matchScore": 75,
+        "summary": "A close match, but requires clearer proof of your qualification and campaign project. Attaching the university campaign strategy project and initiating degree verification will significantly improve your application.",
+        "matchedSkills": [
+          "Content planning",
+          "Customer communication",
+          "Canva"
+        ],
+        "missing": [
+          {
+            "id": "degree-verification",
+            "label": "Degree verification",
+            "type": "Verification",
+            "detail": "The employer asks for completed qualification evidence. Store the result, not the raw document, by default."
+          },
+          {
+            "id": "campaign-evidence",
+            "label": "Campaign project evidence",
+            "type": "Evidence",
+            "detail": "Attach the university campaign strategy project so the employer can see how Jordan thinks."
+          }
+        ],
+        "nextAction": "Gather evidence and apply"
+      },
+      {
+        "id": "campaign-assistant",
+        "title": "Digital Campaign Assistant",
+        "employer": "BrightDesk Media",
+        "status": "growth",
+        "matchScore": 65,
+        "summary": "This role represents a growth opportunity. To be a strong candidate, focus on developing evidence for campaign reporting and analytics.",
+        "matchedSkills": [
+          "Writing",
+          "Audience research",
+          "Presentation"
+        ],
+        "missing": [
+          {
+            "id": "analytics-evidence",
+            "label": "Analytics evidence",
+            "type": "Growth skill",
+            "detail": "The role asks for basic campaign reporting. Recommend a short analytics learning task and a small evidence item."
+          }
+        ],
+        "nextAction": "Develop new skills and evidence"
+      }
+    ]
+  },
+  "indexes": {
+    "readinessSignals": [
+      {
+        "label": "Profile completeness",
+        "value": 74,
+        "detail": "Story, skills, education, and goals are already filled.",
+        "tone": "ready"
+      },
+      {
+        "label": "Evidence strength",
+        "value": 68,
+        "detail": "Writing sample is attached; campaign project still helps.",
+        "tone": "proof"
+      },
+      {
+        "label": "Trust signals",
+        "value": 62,
+        "detail": "Working rights are verified; degree verification is pending.",
+        "tone": "warning"
+      },
+      {
+        "label": "Best opportunity match",
+        "value": 86,
+        "detail": "Junior Content Coordinator is ready to apply.",
+        "tone": "ready"
+      }
+    ],
+    "verifiedEmployabilityIndex": {
+      "score": 78,
+      "percentile": 68,
+      "benchmarkLabel": "Entry marketing benchmark",
+      "summary": "Your Verified Employability Index combines employer readiness, industry alignment, collaboration, execution consistency, and professional maturity into a strong signal for opportunities.",
+      "signals": [
+        {
+          "label": "Employer readiness",
+          "value": 82,
+          "benchmark": 76,
+          "detail": "Working rights, profile story, and role intent are clear enough for employer review.",
+          "tone": "ready"
+        },
+        {
+          "label": "Industry alignment",
+          "value": 76,
+          "benchmark": 72,
+          "detail": "Content and marketing signals match the sector benchmark, with analytics still developing.",
+          "tone": "proof"
+        },
+        {
+          "label": "Collaboration",
+          "value": 84,
+          "benchmark": 78,
+          "detail": "Hospitality evidence shows teamwork, customer communication, and pressure handling.",
+          "tone": "ready"
+        },
+        {
+          "label": "Execution consistency",
+          "value": 71,
+          "benchmark": 74,
+          "detail": "Campaign project evidence will lift confidence in follow-through and delivery quality.",
+          "tone": "warning"
+        },
+        {
+          "label": "Professional maturity",
+          "value": 79,
+          "benchmark": 76,
+          "detail": "Follow-up rhythm and consent settings show employer-safe professional behaviour.",
+          "tone": "ready"
+        }
+      ],
+      "trend": [
+        {
+          "label": "Wk 1",
+          "value": 62
+        },
+        {
+          "label": "Wk 2",
+          "value": 66
+        },
+        {
+          "label": "Wk 3",
+          "value": 69
+        },
+        {
+          "label": "Wk 4",
+          "value": 72
+        },
+        {
+          "label": "Wk 5",
+          "value": 75
+        },
+        {
+          "label": "Now",
+          "value": 78
+        }
+      ],
+      "opportunityImpact": [
+        {
+          "role": "Junior Content Coordinator",
+          "value": 84,
+          "benchmark": 76,
+          "tone": "ready",
+          "decision": "Apply now",
+          "evidence": "Writing sample, hospitality communication, Canva portfolio",
+          "gap": "No material gap",
+          "action": "Lead the application with the campaign strategy project.",
+          "detail": "Highest employability fit because writing, service communication, and proof are aligned."
+        },
+        {
+          "role": "Marketing Assistant",
+          "value": 73,
+          "benchmark": 75,
+          "tone": "warning",
+          "decision": "Hold for proof",
+          "evidence": "Content planning, customer communication, early campaign work",
+          "gap": "Degree verification and campaign project",
+          "action": "Attach project evidence before sending the application.",
+          "detail": "Close fit; degree verification and campaign evidence would move this into ready range."
+        },
+        {
+          "role": "Digital Campaign Assistant",
+          "value": 64,
+          "benchmark": 74,
+          "tone": "proof",
+          "decision": "Growth target",
+          "evidence": "Writing, audience research, presentation work",
+          "gap": "Campaign reporting and analytics evidence",
+          "action": "Complete one analytics mini-project before applying.",
+          "detail": "Useful growth target once Jordan adds analytics evidence."
+        }
+      ]
+    },
+    "verifiedCapabilityIndex": {
+      "score": 73,
+      "sectorBenchmark": 72,
+      "summary": "Your Verified Capability Index reflects a solid foundation across five key layers, benchmarked against entry-level sector requirements, including AI Literacy & Fluency.",
+      "layers": [
+        {
+          "label": "Foundational capability",
+          "score": 78,
+          "benchmark": 72,
+          "status": "Validated",
+          "evidence": "Resume import, degree claim, and writing sample",
+          "detail": "Core communication, learning habits, and self-management sit above the entry marketing benchmark.",
+          "tone": "ready"
+        },
+        {
+          "label": "Role craft",
+          "score": 74,
+          "benchmark": 70,
+          "status": "Evidence attached",
+          "evidence": "Copywriting sample and campaign planning work",
+          "detail": "Jordan can show practical content planning, audience thinking, and clear written output.",
+          "tone": "ready"
+        },
+        {
+          "label": "Workplace collaboration",
+          "score": 82,
+          "benchmark": 76,
+          "status": "Validated",
+          "evidence": "Hospitality experience note and customer scenarios",
+          "detail": "Teamwork and customer-facing judgement are strong signals for early-career employers.",
+          "tone": "ready"
+        },
+        {
+          "label": "AI Literacy & Fluency",
+          "score": 69,
+          "benchmark": 74,
+          "status": "Growth priority",
+          "evidence": "ChatGPT, Canva, and Notion AI usage examples",
+          "detail": "Jordan uses AI for drafting and summaries, but needs stronger prompt framing, source checking, and responsible disclosure.",
+          "tone": "warning"
+        },
+        {
+          "label": "Applied proof",
+          "score": 66,
+          "benchmark": 71,
+          "status": "Needs evidence",
+          "evidence": "Campaign project ready to attach",
+          "detail": "The index will lift once the campaign project and one analytics mini-project are attached.",
+          "tone": "proof"
+        }
+      ],
+      "aiFluencySignals": [
+        {
+          "label": "Prompt framing",
+          "value": 72,
+          "benchmark": 74,
+          "detail": "Can describe intent and audience, but needs more consistent constraints.",
+          "tone": "proof"
+        },
+        {
+          "label": "Output evaluation",
+          "value": 67,
+          "benchmark": 73,
+          "detail": "Needs stronger habits for fact checking and identifying weak AI output.",
+          "tone": "warning"
+        },
+        {
+          "label": "Workflow integration",
+          "value": 71,
+          "benchmark": 70,
+          "detail": "Uses AI appropriately for first drafts, edits, and research summaries.",
+          "tone": "ready"
+        },
+        {
+          "label": "Responsible use",
+          "value": 65,
+          "benchmark": 75,
+          "detail": "Needs clearer disclosure and privacy judgement before employer-facing work.",
+          "tone": "warning"
+        }
+      ],
+      "sectorBenchmarks": [
+        {
+          "label": "Content marketing",
+          "value": 76,
+          "benchmark": 72,
+          "detail": "Content marketing is Jordan's strongest sector match.",
+          "tone": "ready"
+        },
+        {
+          "label": "Social media",
+          "value": 72,
+          "benchmark": 73,
+          "detail": "Close to benchmark, but stronger scheduling and reporting evidence would help.",
+          "tone": "proof"
+        },
+        {
+          "label": "Campaign support",
+          "value": 68,
+          "benchmark": 74,
+          "detail": "Needs campaign reporting and analytics proof.",
+          "tone": "warning"
+        }
+      ],
+      "validationSources": [
+        {
+          "label": "Portfolio writing sample",
+          "status": "Verified",
+          "detail": "Mapped to copywriting, audience clarity, and role craft."
+        },
+        {
+          "label": "Hospitality experience note",
+          "status": "Verified",
+          "detail": "Mapped to collaboration, reliability, and communication under pressure."
+        },
+        {
+          "label": "Campaign strategy project",
+          "status": "Pending attach",
+          "detail": "Will validate applied proof and execution consistency once added."
+        },
+        {
+          "label": "AI workflow reflection",
+          "status": "Benchmarking",
+          "detail": "Used to assess responsible AI habits against entry-level sector expectations."
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "publicSummary": [
+      "Jordan Lee is a recent Bachelor of Communications graduate from UTS.",
+      "Seeking entry-level roles in marketing and content creation.",
+      "Skills include Copywriting, Customer Communication, and Research.",
+      "Has experience in customer-facing hospitality roles.",
+      "Actively developing AI literacy for professional use."
+    ],
+    "privateByDefault": [
+      "Contact Information (Email, Phone)",
+      "Full Work History Details",
+      "Specific Project Descriptions (unless explicitly shared)",
+      "Verification Documents"
+    ],
+    "consentNotes": [
+      "Contact information is shared only with employers after explicit consent or application.",
+      "Verification statuses are shared with employers on request.",
+      "Profile data is used to match Jordan with relevant opportunities."
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "runId": "6d8718a8-ae35-4b18-958d-2750692bc79c",
+  "provider": "gemini-flash",
+  "displayName": "Gemini Flash",
+  "model": "gemini-2.5-flash",
+  "promptToneId": "employer-ready",
+  "promptLabel": "Employer-ready",
+  "startedAt": "2026-06-25T12:23:37.323270+00:00",
+  "finishedAt": "2026-06-25T12:24:11.870320+00:00",
+  "schemaValid": true,
+  "validationErrors": [],
+  "attempts": 1,
+  "dryRun": false,
+  "outputChars": 13812,
+  "status": "completed",
+  "input_tokens": 3970,
+  "output_tokens": 7874,
+  "total_tokens": 11844,
+  "latency_ms": 34515
+}
