@@ -1,4 +1,6 @@
-const MANIFEST_URL = "./data/generated/manifest.json";
+// index.html lives in web/, while data/ lives one level up at the task root.
+const DATA_PREFIX = "../";
+const MANIFEST_URL = `${DATA_PREFIX}data/generated/manifest.json`;
 
 function safeText(value) {
   return String(value ?? "")
@@ -117,7 +119,7 @@ class DHPJsonProfile extends HTMLElement {
         (manifest.models || []).map(async (model) => {
           const runs = await Promise.all(
             (model.runs || []).map(async (run) => {
-              const outputResponse = await fetch(run.outputPath, { cache: "no-store" });
+              const outputResponse = await fetch(`${DATA_PREFIX}${run.outputPath}`, { cache: "no-store" });
               if (!outputResponse.ok) {
                 return { ...run, data: null };
               }
