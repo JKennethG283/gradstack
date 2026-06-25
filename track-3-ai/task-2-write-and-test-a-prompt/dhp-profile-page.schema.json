@@ -1,0 +1,453 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gradstack.local/schemas/dhp-profile-page.v1.json",
+  "title": "DHP Profile Page Output Format",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "sourceSummary",
+    "user",
+    "profileHeader",
+    "dhpView",
+    "resumeView",
+    "matchPanel",
+    "indexes",
+    "privacy"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "dhp-profile-page.v1"
+    },
+    "sourceSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generatedFor", "targetRoles", "assumptions", "unverifiedOrPending"],
+      "properties": {
+        "generatedFor": { "type": "string" },
+        "targetRoles": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "unverifiedOrPending": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "user": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fullName", "initials", "age", "email", "phone", "location"],
+      "properties": {
+        "fullName": { "type": "string" },
+        "initials": { "type": "string" },
+        "age": { "type": "integer", "minimum": 13, "maximum": 100 },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "location": { "type": "string" }
+      }
+    },
+    "profileHeader": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["railLabels", "headline", "metaFacts", "readinessScore", "indexLinks"],
+      "properties": {
+        "railLabels": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": { "type": "string" }
+        },
+        "headline": { "type": "string" },
+        "metaFacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "readinessScore": { "$ref": "#/$defs/score" },
+        "indexLinks": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/indexLink" }
+        }
+      }
+    },
+    "dhpView": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["personalStory", "insightCards", "skillsWithEvidence", "trustAndConsent"],
+      "properties": {
+        "personalStory": { "type": "string" },
+        "insightCards": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/insightCard" }
+        },
+        "skillsWithEvidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/skillEvidence" }
+        },
+        "trustAndConsent": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/verificationStatus" }
+        }
+      }
+    },
+    "resumeView": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["education", "experiences", "projects", "applications"],
+      "properties": {
+        "education": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/educationItem" }
+        },
+        "experiences": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/experienceItem" }
+        },
+        "projects": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/projectItem" }
+        },
+        "applications": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/applicationItem" }
+        }
+      }
+    },
+    "matchPanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "intro", "selectedMatchId", "opportunities"],
+      "properties": {
+        "title": { "type": "string" },
+        "intro": { "type": "string" },
+        "selectedMatchId": { "type": "string" },
+        "opportunities": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/opportunityMatch" }
+        }
+      }
+    },
+    "indexes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["readinessSignals", "verifiedEmployabilityIndex", "verifiedCapabilityIndex"],
+      "properties": {
+        "readinessSignals": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/benchmarkSignal" }
+        },
+        "verifiedEmployabilityIndex": { "$ref": "#/$defs/verifiedEmployabilityIndex" },
+        "verifiedCapabilityIndex": { "$ref": "#/$defs/verifiedCapabilityIndex" }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["publicSummary", "privateByDefault", "consentNotes"],
+      "properties": {
+        "publicSummary": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "privateByDefault": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "consentNotes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "tone": {
+      "type": "string",
+      "enum": ["ready", "warning", "growth", "proof", "neutral"]
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "target"],
+      "properties": {
+        "label": { "type": "string" },
+        "target": { "type": "string" }
+      }
+    },
+    "indexLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "score", "subtitle", "targetPage", "tone"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "score": { "$ref": "#/$defs/score" },
+        "subtitle": { "type": "string" },
+        "targetPage": { "type": "string" },
+        "tone": { "$ref": "#/$defs/tone" }
+      }
+    },
+    "insightCard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "body", "tone"],
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "tone": { "$ref": "#/$defs/tone" },
+        "action": { "$ref": "#/$defs/action" }
+      }
+    },
+    "skillEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "level", "confidence", "context", "evidence", "status"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "level": { "type": "string" },
+        "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "context": { "type": "string" },
+        "evidence": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "verificationStatus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "status", "visibility", "note", "tone"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string" },
+        "status": { "type": "string" },
+        "visibility": { "type": "string" },
+        "note": { "type": "string" },
+        "tone": { "$ref": "#/$defs/tone" }
+      }
+    },
+    "educationItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["qualification", "institution", "status"],
+      "properties": {
+        "qualification": { "type": "string" },
+        "institution": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "experienceItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "organisation", "detail"],
+      "properties": {
+        "title": { "type": "string" },
+        "organisation": { "type": "string" },
+        "detail": { "type": "string" }
+      }
+    },
+    "projectItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "role", "outcome", "status"],
+      "properties": {
+        "title": { "type": "string" },
+        "role": { "type": "string" },
+        "outcome": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "applicationItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "employer", "status", "note"],
+      "properties": {
+        "title": { "type": "string" },
+        "employer": { "type": "string" },
+        "status": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "missingSignal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "type", "detail"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "type": { "type": "string" },
+        "detail": { "type": "string" }
+      }
+    },
+    "opportunityMatch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "employer",
+        "status",
+        "matchScore",
+        "summary",
+        "matchedSkills",
+        "missing",
+        "nextAction"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "employer": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["ready", "needs-info", "growth"]
+        },
+        "matchScore": { "$ref": "#/$defs/score" },
+        "summary": { "type": "string" },
+        "matchedSkills": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "missing": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/missingSignal" }
+        },
+        "nextAction": { "type": "string" }
+      }
+    },
+    "benchmarkSignal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "value", "detail", "tone"],
+      "properties": {
+        "label": { "type": "string" },
+        "value": { "$ref": "#/$defs/score" },
+        "benchmark": { "$ref": "#/$defs/score" },
+        "detail": { "type": "string" },
+        "tone": { "$ref": "#/$defs/tone" }
+      }
+    },
+    "trendPoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "value"],
+      "properties": {
+        "label": { "type": "string" },
+        "value": { "$ref": "#/$defs/score" }
+      }
+    },
+    "roleImpact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "value", "benchmark", "tone", "decision", "evidence", "gap", "action", "detail"],
+      "properties": {
+        "role": { "type": "string" },
+        "value": { "$ref": "#/$defs/score" },
+        "benchmark": { "$ref": "#/$defs/score" },
+        "tone": { "$ref": "#/$defs/tone" },
+        "decision": { "type": "string" },
+        "evidence": { "type": "string" },
+        "gap": { "type": "string" },
+        "action": { "type": "string" },
+        "detail": { "type": "string" }
+      }
+    },
+    "verifiedEmployabilityIndex": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["score", "percentile", "benchmarkLabel", "summary", "signals", "trend", "opportunityImpact"],
+      "properties": {
+        "score": { "$ref": "#/$defs/score" },
+        "percentile": { "$ref": "#/$defs/score" },
+        "benchmarkLabel": { "type": "string" },
+        "summary": { "type": "string" },
+        "signals": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/benchmarkSignal" }
+        },
+        "trend": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/trendPoint" }
+        },
+        "opportunityImpact": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/roleImpact" }
+        }
+      }
+    },
+    "capabilityLayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "score", "benchmark", "status", "evidence", "detail", "tone"],
+      "properties": {
+        "label": { "type": "string" },
+        "score": { "$ref": "#/$defs/score" },
+        "benchmark": { "$ref": "#/$defs/score" },
+        "status": { "type": "string" },
+        "evidence": { "type": "string" },
+        "detail": { "type": "string" },
+        "tone": { "$ref": "#/$defs/tone" }
+      }
+    },
+    "validationSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "status", "detail"],
+      "properties": {
+        "label": { "type": "string" },
+        "status": { "type": "string" },
+        "detail": { "type": "string" }
+      }
+    },
+    "verifiedCapabilityIndex": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "score",
+        "sectorBenchmark",
+        "summary",
+        "layers",
+        "aiFluencySignals",
+        "sectorBenchmarks",
+        "validationSources"
+      ],
+      "properties": {
+        "score": { "$ref": "#/$defs/score" },
+        "sectorBenchmark": { "$ref": "#/$defs/score" },
+        "summary": { "type": "string" },
+        "layers": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/capabilityLayer" }
+        },
+        "aiFluencySignals": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/benchmarkSignal" }
+        },
+        "sectorBenchmarks": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/benchmarkSignal" }
+        },
+        "validationSources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/validationSource" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "sourceType": "unfiltered_llm_input",
+  "sourcePurpose": "Raw information that an LLM should transform into a fixed DHP profile page JSON format.",
+  "candidate": {
+    "possibleNames": ["Jordan", "Jordan Lee"],
+    "preferredDisplayName": "Jordan Lee",
+    "age": 24,
+    "email": "jordan.lee@example.com",
+    "phone": "0400 125 642",
+    "location": "Sydney, NSW",
+    "currentSituationNotes": [
+      "Graduated from UTS 18 months ago.",
+      "Studied a Bachelor of Communications.",
+      "Working casual hospitality shifts while applying for marketing and content roles.",
+      "Has applied for 40+ roles through SEEK, Prosple, Indeed, LinkedIn, and Hatch.",
+      "Only heard back from three employers, all rejections.",
+      "Feels invisible in the hiring market and disconnected after leaving university."
+    ],
+    "targetRoles": [
+      "Content Coordinator",
+      "Marketing Assistant",
+      "Social Media Assistant",
+      "Communications Assistant",
+      "Graduate Marketing role"
+    ],
+    "careerGoalRaw": "Find an entry-level content or marketing role where Jordan can show evidence of writing, customer empathy, and project thinking."
+  },
+  "educationRaw": [
+    {
+      "qualification": "Bachelor of Communications",
+      "institution": "University of Technology Sydney",
+      "status": "Completed",
+      "verificationStatus": "Pending",
+      "notes": [
+        "Degree is claimed as completed but still needs verification before employers see it as a trust signal.",
+        "Relevant to writing, audience awareness, communication, research, and campaign work."
+      ]
+    }
+  ],
+  "workHistoryRaw": [
+    {
+      "title": "Hospitality team member",
+      "organisation": "Casual shifts while applying",
+      "employmentType": "Casual",
+      "notes": [
+        "Customer-facing work.",
+        "Handled questions and requests during busy service periods.",
+        "Worked with a team under pressure.",
+        "Transferable evidence for customer communication, reliability, prioritisation, and resilience."
+      ]
+    }
+  ],
+  "projectsAndEvidenceRaw": [
+    {
+      "title": "University campaign strategy project",
+      "status": "Ready to attach",
+      "rawDescription": "Campaign project with audience research, channel planning, and sample campaign content.",
+      "possibleSkills": [
+        "Research and content planning",
+        "Audience awareness",
+        "Campaign thinking",
+        "Presentation",
+        "Copywriting"
+      ],
+      "evidenceNotes": [
+        "Could be used as proof for content planning and campaign thinking.",
+        "Needs to be uploaded or attached before the DHP can use it as verified evidence."
+      ]
+    },
+    {
+      "title": "Writing sample",
+      "status": "Attached",
+      "rawDescription": "Writing sample from portfolio or university work.",
+      "possibleSkills": ["Copywriting", "Written communication", "Audience clarity"],
+      "evidenceNotes": ["Can support copywriting skill statement."]
+    }
+  ],
+  "skillsRaw": [
+    {
+      "name": "Copywriting",
+      "rawLevel": "Working",
+      "confidence": 4,
+      "rawEvidence": "Writing sample attached and used in portfolio pieces, cover letters, and university campaign copy."
+    },
+    {
+      "name": "Customer communication",
+      "rawLevel": "Confident",
+      "confidence": 5,
+      "rawEvidence": "Practised daily through hospitality work and complaint resolution."
+    },
+    {
+      "name": "Research and content planning",
+      "rawLevel": "Working",
+      "confidence": 4,
+      "rawEvidence": "Used in a university campaign strategy project for a youth audience."
+    },
+    {
+      "name": "Canva",
+      "rawLevel": "Basic to working",
+      "confidence": 3,
+      "rawEvidence": "Mentioned as a tool Jordan has used, but stronger evidence would help."
+    }
+  ],
+  "aiReadinessRaw": {
+    "comfortLevel": 3,
+    "toolsUsed": ["ChatGPT", "Canva", "Notion AI"],
+    "useCases": ["Drafting ideas", "Editing cover letters", "Research summaries"],
+    "responsibleAiConfidence": 3,
+    "notes": [
+      "Jordan uses AI for drafting and summaries.",
+      "Needs stronger prompt framing, output checking, and privacy judgement before employer-facing work."
+    ]
+  },
+  "verificationAndConsentRaw": [
+    {
+      "type": "Working rights",
+      "status": "Verified",
+      "visibility": "Employer on request",
+      "privacyNote": "Store the verification status, not the raw document, by default."
+    },
+    {
+      "type": "Degree",
+      "status": "Pending",
+      "visibility": "Employer on request",
+      "privacyNote": "Qualification claim exists, but verification result is not complete yet."
+    }
+  ],
+  "applicationsRaw": [
+    {
+      "title": "Marketing Intern",
+      "source": "Hatch listing",
+      "status": "Viewed",
+      "note": "Employer opened the DHP summary two days after submission."
+    },
+    {
+      "title": "Content Assistant",
+      "source": "LinkedIn listing",
+      "status": "Submitted",
+      "note": "No employer activity yet. Gradstack can prompt for a follow-up."
+    }
+  ],
+  "jobAdsRaw": [
+    {
+      "id": "content-coordinator",
+      "title": "Junior Content Coordinator",
+      "employer": "Civic Spark Studio",
+      "jobFitNotes": [
+        "Strong fit for writing, research, Canva, and customer empathy.",
+        "Jordan can apply if writing sample and hospitality communication evidence are visible."
+      ],
+      "requestedSkills": ["Copywriting", "Research", "Canva", "Customer empathy"],
+      "missingSignals": []
+    },
+    {
+      "id": "marketing-assistant",
+      "title": "Marketing Assistant",
+      "employer": "Social Impact Collective",
+      "jobFitNotes": [
+        "Close match but needs clearer qualification proof and campaign evidence.",
+        "Do not send until campaign project is attached and degree verification has started."
+      ],
+      "requestedSkills": ["Content planning", "Customer communication", "Canva"],
+      "missingSignals": [
+        {
+          "id": "degree-verification",
+          "label": "Degree verification",
+          "type": "Verification",
+          "detail": "The employer asks for completed qualification evidence."
+        },
+        {
+          "id": "campaign-evidence",
+          "label": "Campaign project evidence",
+          "type": "Evidence",
+          "detail": "Attach the university campaign strategy project so the employer can see how Jordan thinks."
+        }
+      ]
+    },
+    {
+      "id": "campaign-assistant",
+      "title": "Digital Campaign Assistant",
+      "employer": "BrightDesk Media",
+      "jobFitNotes": [
+        "Growth opportunity rather than apply-now role.",
+        "Needs analytics evidence before applying."
+      ],
+      "requestedSkills": ["Writing", "Audience research", "Presentation", "Campaign reporting"],
+      "missingSignals": [
+        {
+          "id": "analytics-evidence",
+          "label": "Analytics evidence",
+          "type": "Growth skill",
+          "detail": "The role asks for basic campaign reporting. Recommend a short analytics learning task and a small evidence item."
+        }
+      ]
+    }
+  ],
+  "indexAndScoringNotes": {
+    "profileCompleteness": 74,
+    "readinessSignals": [
+      {
+        "label": "Profile completeness",
+        "value": 74,
+        "detail": "Story, skills, education, and goals are already filled.",
+        "tone": "ready"
+      },
+      {
+        "label": "Evidence strength",
+        "value": 68,
+        "detail": "Writing sample is attached; campaign project still helps.",
+        "tone": "proof"
+      },
+      {
+        "label": "Trust signals",
+        "value": 62,
+        "detail": "Working rights are verified; degree verification is pending.",
+        "tone": "warning"
+      },
+      {
+        "label": "Best opportunity match",
+        "value": 86,
+        "detail": "Junior Content Coordinator is ready to apply.",
+        "tone": "ready"
+      }
+    ],
+    "verifiedEmployabilityIndex": {
+      "score": 78,
+      "percentile": 68,
+      "benchmarkLabel": "Entry marketing benchmark",
+      "summary": "VEI combines employer readiness, industry alignment, collaboration, execution consistency, and professional maturity into one opportunity-facing employability signal."
+    },
+    "verifiedCapabilityIndex": {
+      "score": 73,
+      "sectorBenchmark": 72,
+      "summary": "VCI is a five-layer verified capability profile. Each layer is independently validated and compared with entry-level sector requirements, including AI Literacy & Fluency."
+    }
+  },
+  "pageRecreationRequirements": {
+    "targetPrototypePath": "track-2-development/task-2-build-a-component-or-prototype/",
+    "pageName": "DHP profile page",
+    "railLabels": ["Story", "Skill", "Proof", "Trust", "Index"],
+    "requiredViews": ["DHP view", "Resume view"],
+    "requiredSections": [
+      "profile header",
+      "human story",
+      "career direction",
+      "work style",
+      "AI readiness",
+      "verified indexes",
+      "skills with evidence",
+      "trust and consent",
+      "education",
+      "experience",
+      "projects",
+      "applications",
+      "capability match"
+    ],
+    "toneGuidance": "Supportive, professional, evidence-based, and specific. Do not make Jordan sound more experienced than the evidence supports."
+  }
+}
