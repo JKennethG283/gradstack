@@ -1001,9 +1001,3 @@ For a first version, I would prioritise:
 5. Application tracking once a matched role is ready to apply.
 
 I would deliberately keep community membership tables out of the first version of this schema. Jordan's first job is not to join another group; it is to understand how his story, proof, readiness, and next application fit together. Community features can still be recommended later from goals, interests, events, and mentoring behaviour without making membership a core DHP dependency.
-
-## Grill-Me Decision I Would Defend
-
-The core design question is whether the DHP should be a profile-only object or a matching-ready trust layer.
-
-Recommended answer: it should be a matching-ready trust layer. A profile-only model would be simpler, but it would miss what makes Gradstack different. Jordan needs to be seen as a whole person, understand what he is ready for, prove claims with evidence, control visibility, and get clearer feedback after applying. That requires structured relationships between story, skills, evidence, goals, verification, VEI, VCI, opportunities, and applications.
